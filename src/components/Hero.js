@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="flex flex-col ">
         <div className="ml-28 pt-12 ">
           <h1 className="text-[78px] font-semibold text-white  ">
-            Hi, I'm Christy!
+            Hi, I&apos;m Christy!
           </h1>
           <h2 className="text-[40px] font-mono text-white">
             A frontend <span className="text-blue-500">developer</span> <br />

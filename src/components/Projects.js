@@ -60,7 +60,7 @@ export default function Projects() {
     {
       name: "API Playground",
       title: {
-        one: "API testing app for non-developers to learn use of API's.",
+        one: "API testing app for non-developers to learn use of APIs.",
         two: "Users test API routes via Postman.",
         three: "Powered by Prisma and PostgreSQL technologies.",
         four: "Protected via API key.",
@@ -98,7 +98,11 @@ export default function Projects() {
       <div className="mt-10 flex flex-col">
         {cardDataWithImages.map((card, index) => (
           <div className="flex mb-20" key={index}>
-            <Image src={card.image} className="ml-6 rounded-lg w-[57%]" />
+            <Image
+              src={card.image}
+              className="ml-6 rounded-lg w-[57%]"
+              alt=""
+            />
 
             <div className="flex flex-col w-1/2 ml-8">
               <h1 className="text-[40px] my-2 text-white pl-2 ">{card.name}</h1>
