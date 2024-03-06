@@ -4,6 +4,7 @@ import Link from "next/link";
 import "animate.css";
 export default function Hero() {
   let git = "https://github.com/christweaver";
+
   return (
     <div className="background h-screen flex trans ">
       <div className="flex flex-col ">
@@ -17,9 +18,9 @@ export default function Hero() {
             <span className="text-blue-500">efficient</span> code.
           </h2>
         </div>
-        <div className="ml-28 mt-14 ">
+        <div className="ml-28 mt-14">
           <Link
-            href="#"
+            href="mailto:christyweaver.cw@gmail.com"
             className="buttonBackground mr-16 text-white text-[25px] py-3 px-12 w-[200px] h-full rounded-lg"
           >
             Get in Touch

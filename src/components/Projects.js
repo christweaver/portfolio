@@ -1,5 +1,5 @@
 import Image from "next/image";
-// import gitHub from "/assets/github.jpg";
+import devDevelopers from "../assets/devDevelopers3.png";
 import cruiseFleet from "../assets/cruisefleet.png";
 import swoleMate from "../assets/swolemate.png";
 import Link from "next/link";
@@ -7,21 +7,20 @@ export default function Projects() {
   // let swoleGit = "https://github.com/christweaver/Workout-tracker-app";
   const imageMap = {
     cruiseFleet: cruiseFleet,
-    swoleMate: swoleMate, // Add more image variables as needed
-    // Add more image names and variables as needed
+    swoleMate: swoleMate,
+    devDevelopers: devDevelopers,
   };
 
   const cardData = [
     {
       name: "CarFleet",
       title: {
-        one: "Car rental app integrates Google Autocomplete for location inputs.",
+        one: "A car rental app with dynamic and modern features",
         two: "Explore options by date, time, and vehicle type.",
-        three:
-          "Browse through the fleet, select specific cars or filter by category.",
-        four: "Dynamic pricing based on car make and rental duration.",
+        three: "Integrated with Google Autocomplete for location inputs.",
+        four: "Pricing based on car make and rental duration.",
         five: "Modern UI design for seamless user experience.",
-        six: "Powered by Prisma and Neon technologies.",
+        six: "Browse through the fleet, select specific cars or filter by category.",
       },
       link: {
         href: "https://github.com/christweaver/car-rental",
@@ -33,17 +32,18 @@ export default function Projects() {
 
         text: "Live",
       },
-      imageName: "cruiseFleet", // Specify the image name for this card
+      imageName: "cruiseFleet",
     },
     {
       name: "SwoleMate",
       title: {
         one: "Work out tracking app with MongoDB database integration.",
-        two: "Authentication feature ensures privacy and personalized tracking.",
-        three: "Choose from curated routines provided.",
-        four: " Select difficulty level and target specific body areas for exercises.",
+        two: "Contemporary UI for smooth interaction.",
+        three:
+          "Select difficulty level and target specific body areas for exercises.",
+        four: "Choose from curated routines provided.",
         five: " Create and customize your unique workout routines.",
-        six: "Write something here could be long",
+        six: "Authentication feature ensures privacy and personalized tracking.",
       },
       link2: {
         href: "https://github.com/christweaver/Workout-tracker-app",
@@ -55,7 +55,29 @@ export default function Projects() {
 
         text: "Live",
       },
-      imageName: "swoleMate", // Specify the image name for this card
+      imageName: "swoleMate",
+    },
+    {
+      name: "API Playground",
+      title: {
+        one: "API testing app for non-developers to learn use of API's.",
+        two: "Users test API routes via Postman.",
+        three: "Powered by Prisma and PostgreSQL technologies.",
+        four: "Protected via API key.",
+        five: "User-friendly UI for beginners.",
+        six: "Uses express validator for input validation.",
+      },
+      link2: {
+        href: "https://github.com/christweaver/kelson-app",
+
+        text: "GitHub",
+      },
+      link: {
+        href: null,
+
+        text: "Live",
+      },
+      imageName: "devDevelopers",
     },
   ];
 
@@ -92,14 +114,16 @@ export default function Projects() {
                   <div className="title-container h-[100px] px-2">
                     <h1 className="mb-8">{card.title.three}</h1>
                   </div>
-                  <Link
-                    href={card.link.href}
-                    className="bg-indigo-800 text-[22px] text-white py-3 text-center w-2/3  rounded-lg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {card.link.text}
-                  </Link>
+                  {card.link.href && (
+                    <Link
+                      href={card.link.href}
+                      className="bg-indigo-800 text-[22px] text-white py-3 text-center w-2/3  rounded-lg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {card.link.text}
+                    </Link>
+                  )}
                 </div>
 
                 <div className="flex flex-col m w-1/2 text-[20px] text-white">
